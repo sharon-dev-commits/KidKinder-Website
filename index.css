@@ -1,0 +1,570 @@
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+body {
+  font-family: "Nunito", sans-serif;
+  color: #00394f;
+}
+
+/* -----------------------------------
+   NAVBAR
+----------------------------------- */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo i {
+  font-size: 2.8rem;
+  color: #00394f;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #17a2b8;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 700;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #00394f;
+}
+
+.nav-button {
+  padding: clamp(0.6rem,2vw,0.8rem) clamp(0.5rem,6vw,1.8rem);
+  font-size: clamp(0.6rem,1.3vw,1rem);
+  font-weight: 600;
+  border-radius: 25px;
+  border: none;
+  background: #17a2b8;
+  color: white;
+}
+
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem clamp(2rem,8vw,15rem);
+  background: #17a2b8;
+  flex-wrap: wrap;  
+  gap: 2rem;
+}
+
+.content-left {
+  flex: 1 1 350px;
+  color: white;
+}
+
+.content-heading {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-family: "Handlee", cursive;
+}
+
+.content-subheading {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-family: "Handlee", cursive;
+}
+
+.content-description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.content-button {
+  padding: 0.9rem 2.2rem;
+  font-size: 1rem;
+  border-radius: 40px;
+  border: none;
+  background: #00394f;
+  color: white;
+}
+
+.content-img {
+  width: 100%;
+  max-width: 450px;
+}
+
+.features {
+  margin: 0px;
+  /* padding: 50px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 4rem 15vw;
+  margin: auto;
+}
+
+.one {
+  display: flex;
+  gap: 1.2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.one-icon i {
+  font-size: 2rem;
+  color: #17a2b8;
+}
+
+.one-content h1 {
+  font-family: "Handlee", cursive;
+  font-size: 1.4rem;
+}
+
+.one-content p {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.about-us {
+  width: 100%;
+  max-width: 1150px;
+  margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.about-right{
+  padding: 2rem;
+  width: 50%;
+}
+.about-left img {
+  width: 100%;
+  max-width: 450px;
+  
+  border-radius: 10px;
+}
+
+.about-right-up h2 {
+  color: #17a2b8;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-right-up h1 {
+  font-size: 2.5rem;
+  font-family: "Handlee", cursive;
+  margin-bottom: 1rem;
+}
+
+.about-right-up p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about-right-down {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.about-right-down img {
+  width: 130px;
+  border-radius: 6px;
+}
+
+.about-right-down-content p {
+  margin-bottom: 0.7rem;
+  
+}
+
+.about-button {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #17a2b8;
+  border-radius: 25px;
+  border: none;
+}
+.popularclasses-up{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
+}
+.popularclasses-up h2{
+  font-family: "Handlee", cursive;
+  padding: 30px;
+  font-size: 3rem;
+}
+.popularclasses-up p{
+  
+    color: #17a2b8;
+    position: relative;
+}
+.popularclasses-up p::after{
+  content: "";
+    position: absolute;
+    top: 8px;
+    right: -60px;
+    /* text-align: center; */
+    
+    
+    height: 2px;
+    width: 50px;
+    background-color: #17a2b8;
+    
+}
+.popularclasses-up p::before{
+    position: absolute;
+    top: 8px;
+    left: -60px;
+    /* text-align: center; */
+    
+    content: "";
+    height: 2px;
+    width: 50px;
+    background-color: #17a2b8;
+    
+}
+.popularclasses-down{
+    padding: 10px 8vw;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: space-around;
+}
+.card1{
+    border-radius: 10px;
+    background-color: #f3f3f396;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card-table{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.card-table table{
+
+    font-family: "Nunito", sans-serif;
+width: 80%;
+  border-collapse: collapse;
+  font-family: "Nunito", sans-serif;
+  color: #00394f;
+  margin: 20px;    /* justify-content: center; */
+}
+.card-table tr th{
+  border-right: 2px solid #e0e0e0;
+}
+.card-table tr:not(:last-child) {
+  border-bottom: 2px solid #e0e0e0;
+}
+.card-table th,td{
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+.card-table th{
+  text-align: right;
+  font-weight: 700;
+  width: 50%;
+}
+.card-table td{
+  text-align: left;
+  width: 50%;
+}
+.card1 .card-image img{
+width: 100%;
+min-height: 50px;
+border-radius: 10px;
+    
+}
+.card-h2{
+  padding: 20px;
+    font-family: "Handlee", cursive;
+
+}
+.card1 p{
+  text-align: justify;
+} 
+.card-button button{
+  padding: 0.8rem 1.8rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #17a2b8;
+  border-radius: 25px;
+  border: none;
+}
+.book{
+  /* padding: 50px; */
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+.book-left{
+  padding: 50px;
+  flex: 1 1 500px;
+  /* background-color: antiquewhite; */
+}
+.book-para{
+  
+  display: inline-block;
+    color: #17a2b8;
+    position: relative;
+    
+}
+.book-lists ul {
+  /* list-style: none; */
+  list-style-image: url(./assets/check-solid-full.svg); 
+  padding-left: 0;
+}
+.book-lists ul li{
+
+  padding-bottom: 10px;
+}
+.book-para-content{
+  padding-bottom: 20px;
+}
+.book-content h2{
+
+  padding-bottom: 20px;
+}
+.book-content:nth-child(2){
+  padding: 100px;
+}
+.book-content .book-para::after{
+    position: absolute;
+    top: 8px;
+    right: -60px;
+    /* text-align: center; */
+    
+    content: "";
+    height: 1.5px;
+    width: 50px;
+    background-color: #17a2b8;
+    
+}
+.book-content h2{
+    font-family: "Handlee", cursive;
+  font-size: 40px;
+}
+.book-right{
+  padding: 20px;
+  flex: 1 1 350px;
+  display: flex;
+  
+  flex-direction: column;
+  
+}
+.book-right-up{
+  border-radius: 5px 5px 0px 0px;
+/* height: 20%; */
+padding: 30px;
+background-color: #00394f;
+
+}
+.book-right-up p{
+  display: flex;          
+  align-items: center;  
+  justify-content: center;
+}
+.book-right-up h2{
+  font-size: 2rem;
+  font-family: "Handlee", cursive;
+  text-align: center;
+  /* margin: auto; */
+  color: white;
+}
+.book-form{
+  border-radius: 0px 0px 5px 5px;
+  background-color: #17a2b8;
+height: 80%;
+
+padding: 20px;
+}
+#form-name,#form-email,#form-select{
+  padding: 10px;
+  display: block;
+  margin: 15px auto;
+  border: none;
+  border-radius: 4px;
+  width: 80%;
+  
+}
+.form-button{
+  display: block;
+  margin: 30px auto;
+  width: 80%;
+  /* height: 2rem; */
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 40px;
+  border: none;
+  background: #00394f;
+  color: white; 
+}
+.book-button{
+  padding: 0.8rem 1.8rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  background: #17a2b8;
+  border-radius: 25px;
+  border: none;
+}
+.our-teachers{
+  padding: 2vw 10vw;
+}
+.teachers-up{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
+}
+.teachers-up h2{
+  font-family: "Handlee", cursive;
+  padding: 30px;
+  font-size: 3rem;
+}
+.teachers-up p{
+  
+    color: #17a2b8;
+    position: relative;
+}
+.teachers-up p::after{
+  content: "";
+    position: absolute;
+    top: 8px;
+    right: -60px;
+    /* text-align: center; */
+    
+    
+    height: 2px;
+    width: 50px;
+    background-color: #17a2b8;
+    
+}
+.teachers-up p::before{
+    position: absolute;
+    top: 8px;
+    left: -60px;
+    /* text-align: center; */
+    
+    content: "";
+    height: 2px;
+    width: 50px;
+    background-color: #17a2b8;
+    
+}
+.teachers-down{
+    /* padding: 10px 8vw; */
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    align-items: center;
+    /* margin: auto; */
+}
+.teachers-image{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 30px;
+}
+.teachers-image img{
+  height: 250px;
+  border-radius: 50%;
+}
+.teachers-image h2{
+  font-family: "Handlee", cursive;
+  /* padding: 30px; */
+  font-size: 2rem;
+}
+@media (max-width:1024px) {
+  .content{
+    /* display: flex; */
+    flex-direction: column-reverse;
+  }
+  .nav ul{
+    display: none;
+  }
+
+  
+}
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+  }
+
+  .content-subheading {
+    font-size: 2rem;
+  }
+  .about-right{
+  padding: 1rem;
+  width: 70%;
+}
+}
+
+@media (max-width: 480px) {
+  
+  .logo i {
+    font-size: 2.4rem;
+  }
+  .logo-text {
+    font-size: 1.8rem;
+  }
+
+  .content-subheading {
+    font-size: 1.8rem;
+  }
+
+  .content-img {
+    max-width: 350px;
+  }
+  
+}
+}

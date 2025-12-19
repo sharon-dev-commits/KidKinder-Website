@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .main {
+        /* background-color: antiquewhite; */
+        height: 100vh;
+      }
+      .nav {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+        background-color: white;
+      }
+      .nav ul {
+        display: flex;
+        font-family: "Nunito", serif;
+      }
+      .nav ul li {
+        list-style: none;
+        /* padding: 0px 0px 0px 20px; */
+        padding-left: 25px;
+      }
+      .nav ul li a {
+        font-weight: 700;
+        color: #00394f;
+        text-decoration: none;
+      }
+      .nav-button {
+        /* padding: 15px; */
+        /* margin-top: 10px; */
+        border: none;
+        border-radius: 25px;
+        background-color: #17a2b8;
+        color: white;
+        font-weight: 600;
+        font-size: 0.9vw;
+        /* font-size: 13px; */
+        height: 2.6vw;
+        /* height: 40px; */
+        width: 7.3vw;
+        /* width: 110px; */
+      }
+      .logo i {
+        margin-right: 10px;
+        color: #00394f;
+        font-size: 3.3vw;
+        /* font-size: 50px; */
+      }
+      .logo-text {
+        color: #17a2b8;
+        font-weight: 650;
+        font-family: "Nunito", serif;
+        font-size: 3.3vw;
+        /* font-size: 50px; */
+      }
+      @media (max-width: 768px) {
+        .nav ul {
+          display: none;
+        }
+      }
+      .content {
+        display: flex;
+        background-color: #17a2b8;
+        /* height: 90vh; */
+        width: 100%;
+      }
+      .content-left {
+        width: 50%;
+        /* background-color: #17A2B8; */
+      }
+
+      .content-left {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10vw;
+        padding-left: 65px;
+        position: relative;
+        font-family: "Handlee", cursive;
+        color: white;
+      }
+      .content-heading {
+        margin-top: 35px;
+        font-size: 1.8vw;
+
+        /* position: absolute;
+        top: 200px; */
+        /* margin: 50px; */
+      }
+      .content-subheading {
+        margin-top: 20px;
+        line-height: 5vw;
+        font-size: 4.5vw;
+        /* font-size: 72px; */
+        /* font-size: 5vw; */
+        /* position: absolute;
+        top: 250px; */
+        /* margin: 50px; */
+      }
+      .content-description {
+        padding: 5px;
+        margin-top: 5px;
+        font-family: "Nunito", serif;
+        font-size: 1.2vw;
+        text-align: justify;
+        /* font-size: 16px; */
+        line-height: 2.5vh;
+        /* line-height: 24px; */
+        /* position: absolute;
+        top: 440px; */
+      }
+      .content-button {
+        margin-top: 2.1vw;
+        /* margin-top: 30px; */
+        border: none;
+        border-radius: 50px;
+        background-color: #00394f;
+        height: 4vw;
+        /* height: 60px; */
+        width: 12vw;
+        /* width: 170px; */
+        font-family: "Nunito", serif;
+        color: white;
+        font-size: 1vw;
+      }
+      .content-button:hover {
+        /* transform: translateY(-5px);
+        transition: 0.2s ease-in-out; */
+        background-color: #012533;
+      }
+      .content-button:active {
+        outline: 2px solid rgba(0, 0, 0, 0.245);
+        /* border: 10px solid rgba(0, 0, 0, 0.206) ; */
+      }
+      .content-right {
+        /* temp */
+      }
+      .content-img {
+        margin: auto;
+        padding: 20px;
+
+        height: 45vw;
+      }
+
+      .features {
+        display: grid;
+        gap: 20px 0px;
+        grid-template-columns: 35% 35% 35%;
+        grid-template-rows: 50% 50%;
+        grid
+        padding: 100px;
+        place-self: center;
+      }
+      .one {
+        padding: 25px;
+        height: 12vw;
+        /* height: 180px; */
+        width: 24.5vw;
+        /* width: 350px; */
+        /* background-color: #e9e9e9; */
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+      .one-icon {
+        height: 100%;
+        width: 30%;
+        float: left;
+        /* background-color: antiquewhite; */
+        padding: 10px;
+      }
+      .one-icon i {
+        color: #17a2b8;
+        font-size: 2.8vw;
+        /* font-size: 40px; */
+      }
+      .one-content {
+        /* overflow: scroll; */
+        color: #00394f;
+        font-size: 0.85vw;
+        float: right;
+        /* background-color: #17a2b8; */
+        height: 100%;
+        width: 70%;
+      }
+      .one-content h1 {
+        font-weight: 600;
+        font-family: "Handlee";
+      }
+      .one-content p {
+        font-size: 0.95vw;
+        font-weight: 300;
+        word-spacing: 2px;
+        margin-top: 5px;
+        font-family: "Nunito";
+      }
+      .about-us {
+        margin: auto;
+        
+        width: 1130px;
+        width: 75vw;
+        /* background-color: #00394f; */
+        /* padding: 40px; */
+        display: flex;
+        justify-content: center;
+      }
+      .about-left {
+        /* width: 20%; */
+        float: left;
+        /* background-color: #012533; */
+      }
+      .about-left img {
+        height: 35vw;
+        /* height: 500px; */
+        /* padding: 20px; */
+        border-radius: 10px;
+      }
+      .about-right-up {
+        
+        /* padding: 50px; */
+        padding: 3.5vw;
+        padding-bottom: 40px;
+        padding-bottom: 3vw;
+        /* width: 40%; */
+        /* background-color: aqua; */
+      }
+      .about-right-up h2 {
+        font-size: 1.1vw;
+        font-weight: 400;
+        font-family: "Nunito", serif;
+        color: #17a2b8;
+        position: relative;
+      }
+      .about-right-up h2::after {
+        position: absolute;
+        content: "";
+        height: 1.5px;
+        top: 0.6vw;
+        left: 10vw;
+        width: 40px;
+        background-color: #17a2b8;
+      }
+      .about-right-up h1 {
+        margin-top: 1.2vw;
+        font-size: 2.8vw;
+        color: #00394f;
+        font-family: "Handlee", cursive;
+      }
+      .about-right-up p {
+        margin-top: 25px;
+        font-family: "Nunito", serif;
+        font-size: 1.1vw;
+      }
+      .about-right-down {
+        display: flex;
+      }
+      .about-right-down img {
+        margin-left: 50px;
+        border-radius: 5px;
+      }
+      .about-right-down-content {
+        position: relative;
+        top: -15px;
+        padding: 20px;
+        font-family: "Nunito", serif;
+        font-size: 1vw;
+
+        padding-bottom: 0px;
+      }
+      .about-right-down img{
+        height: 9vw;
+      }
+      .about-right-down-content p::before {
+        content: "";
+        position: absolute;
+        bottom: -10.1px;
+        left: 20px;
+        background-color: #00394f38;
+        height: 0.1pt;
+        /* width: 300px; */
+        width: 21vw;
+        /* overflow: hidden; */
+      }
+      .about-right-down-content p::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        background-color: #00394f38;
+        height: 0.1pt;
+        /* width: 300px; */
+        width: 21vw;
+      }
+      .about-button {
+        /* margin: 50px; */
+        margin: 3.5vw;
+        /* margin-top: 20px; */
+        margin-top: 1.5vw;
+        border: none;
+        border-radius: 25px;
+        background-color: #17a2b8;
+        color: white;
+        font-weight: 600;
+        font-size: 0.9vw;
+        /* font-size: 13px; */
+        height: 2.6vw;
+        /* height: 40px; */
+        width: 7.3vw;
+        display: inline-block;
+      }
+
+      @media (max-width: 768px) {
+        .nav .nav-button {
+          display: none;
+        }
+        .content-left {
+          padding-top: 1vw;
+          padding-left: 65px;
+        }
+        .features {
+          padding: 50px;
+          gap: 30px;
+          grid-template-columns: 50% 50%;
+          grid-template-rows: 35% 35% 35%;
+        }
+        .one {
+          padding: 20px;
+          height: 18vw;
+          /* height: 180px; */
+          width: 30.5vw;
+          /* width: 350px; */
+          /* background-color: #e9e9e9; */
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+            rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+        .one-icon {
+          height: 100%;
+          width: 30%;
+          float: left;
+          /* background-color: antiquewhite; */
+          padding: 10px;
+        }
+        .one-icon i {
+          color: #17a2b8;
+          font-size: 2.8vw;
+          /* font-size: 40px; */
+        }
+        .one-content {
+          /* overflow: scroll; */
+          color: #00394f;
+          font-size: 1.1vw;
+          float: right;
+          /* background-color: #17a2b8; */
+          height: 100%;
+          width: 70%;
+        }
+        .one-content h1 {
+          font-weight: 600;
+          font-family: "Handlee";
+        }
+        .one-content p {
+          font-size: 1.3vw;
+          font-weight: 300;
+          word-spacing: 2px;
+          margin-top: 5px;
+          font-family: "Nunito";
+        }
+      }
+      @media (max-width: 426px) {
+        .nav {
+          height: 80px;
+        }
+        .logo i {
+          font-size: 8vw;
+        }
+        .logo-text {
+          font-size: 8vw;
+        }
+
+        .content-left {
+          text-align: center;
+          padding: 55px;
+          width: 100%;
+          /* display: inline-block; */
+        }
+        .content {
+          flex-direction: column;
+        }
+        .content-heading {
+          font-size: 6vw;
+        }
+        .content-subheading {
+          line-height: 14vw;
+          font-size: 10vw;
+        }
+        .content-description {
+          text-align: center;
+          /* text-align: jy; */
+          font-size: 3.5vw;
+          margin-bottom: 20px;
+        }
+        .content-right {
+          margin: auto;
+        }
+        .content-button {
+          font-size: 3vw;
+          height: 10vw;
+          width: 30vw;
+          margin: auto;
+        }
+        .content-img {
+          /* text-align: center; */
+          margin: auto;
+          height: 90vw;
+          /* height: 400px; */
+        }
+        .features {
+          /* padding: 50px; */
+          /* gap: 30px; */
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+        }
+        .one {
+          padding: 20px;
+          height: 38vw;
+          /* height: 180px; */
+          width: 60.5vw;
+          /* width: 350px; */
+          /* background-color: #e9e9e9; */
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+            rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+        .one-icon {
+          height: 100%;
+          width: 30%;
+          float: left;
+          /* background-color: antiquewhite; */
+          padding: 10px;
+        }
+        .one-icon i {
+          color: #17a2b8;
+          font-size: 6.8vw;
+          /* font-size: 40px; */
+        }
+        .one-content {
+          /* overflow: scroll; */
+          color: #00394f;
+          font-size: 2.2vw;
+          float: right;
+          /* background-color: #17a2b8; */
+          height: 100%;
+          width: 70%;
+        }
+        .one-content h1 {
+          font-weight: 600;
+          font-family: "Handlee";
+        }
+        .one-content p {
+          font-size: 2.5vw;
+          font-weight: 300;
+          word-spacing: 2px;
+          margin-top: 5px;
+          font-family: "Nunito";
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <div class="logo">
+          <i class="fa-solid fa-hippo"></i>
+          <span class="logo-text">KidKinder</span>
+        </div>
+
+        <div class="links">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Classes</a></li>
+            <li><a href="">Teachers</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Pages</a></li>
+            <li><a href="">Content</a></li>
+          </ul>
+        </div>
+        <div class="button">
+          <button class="nav-button" onclick="nav_drop()">Join Class</button>
+        </div>
+      </div>
+      <!-- <div class="extra_nav"></div> -->
+      <div class="content">
+        <div class="content-left">
+          <h5 class="content-heading">Kids Learning Center</h5>
+          <h1 class="content-subheading">New Approach to Kids Education</h1>
+          <p class="content-description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
+            tenetur tempore excepturi ad. Esse, similique. Quis magnam
+            molestiae, illo quas sequi nulla perspiciatis, ab explicabo quasi,
+            numquam placeat ullam sunt!
+          </p>
+          <button class="content-button">Learn more</button>
+        </div>
+        <div class="content-right">
+          <img
+            class="content-img"
+            src="https://themewagon.github.io/kidkinder/img/header.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="features">
+        <div class="one">
+          <div class="one-icon">
+            <i class="fa-solid fa-xmarks-lines"></i>
+          </div>
+          <div class="one-content">
+            <h1>Play Ground</h1>
+            <p>
+              Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+              lorem amet elitr Lorem ipsum dolor sit. vero...
+            </p>
+          </div>
+        </div>
+        <div class="one">
+          <div class="one-icon">
+            <i class="fa-solid fa-drum"></i>
+          </div>
+          <div class="one-content">
+            <h1>Music and Dance</h1>
+            <p>
+              Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+              lorem amet elitr Lorem ipsum dolor sit. vero...
+            </p>
+          </div>
+        </div>
+        <div class="one">
+          <div class="one-icon">
+            <i class="fa-solid fa-paintbrush"></i>
+          </div>
+          <div class="one-content">
+            <h1>Arts and Crafts</h1>
+            <p>
+              Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+              lorem amet elitr Lorem ipsum dolor sit. vero...
+            </p>
+          </div>
+        </div>
+        <div class="one">
+          <div class="one-icon">
+            <i class="fa-solid fa-car"></i>
+          </div>
+          <div class="one-content">
+            <h1>Safe Transportation</h1>
+            <p>
+              Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+              lorem amet elitr Lorem ipsum dolor sit. vero...
+            </p>
+          </div>
+        </div>
+        <div class="one">
+          <div class="one-icon">
+            <i class="fa-solid fa-burger"></i>
+          </div>
+          <div class="one-content">
+            <h1>Healthy food</h1>
+            <p>
+              Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+              lorem amet elitr Lorem ipsum dolor sit. vero...
+            </p>
+          </div>
+        </div>
+        <div class="one">
+          <div class="one-icon">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </div>
+          <div class="one-content">
+            <h1>Educational Tour</h1>
+            <p>
+              Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+              lorem amet elitr Lorem ipsum dolor sit. vero...
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="about-us">
+        <div class="about-left">
+          <img
+            src="https://themewagon.github.io/kidkinder/img/about-1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="about-right">
+          <div class="about-right-up">
+            <h2>LEARN ABOUT US</h2>
+            <h1>Best School For Your Kids</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
+              consequuntur sed voluptatem optio quibusdam dolores a asperiores
+              id quis quo.
+            </p>
+          </div>
+          <div class="about-right-down">
+            <div class="about-right-down-image">
+              <img
+                src="https://themewagon.github.io/kidkinder/img/about-2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="about-right-down-content">
+              <p class="about-right-down-content">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <p class="about-right-down-content">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <p class="about-right-down-content">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </div>
+          </div>
+          <button class="about-button">Learn more</button>
+        </div>
+      </div>
+      <div class="popularclasses">
+        <div class="popularclasses-up">
+          <p>POPULAR CLASSES</p>
+          <h2>Classes For Your Kids</h2>
+        </div>
+        <div class="popularclasses-down">
+          <div class="card1">
+            <div class="card-image">
+              <img
+                src="https://themewagon.github.io/kidkinder/img/class-1.jpg"
+                alt="image1"
+              />
+            </div>
+            <div class="card-content">
+              <h2 class="card-h2">Drawing Classes</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                voluptatem maiores sunt quasi magni quae provident, id dolorum
+                quibusdam doloribus.
+              </p>
+              <div class="card-table">
+                <table>
+                  <tr>
+                    <th>Age of Kids</th>
+                    <td>3 - 6 Years</td>
+                  </tr>
+                  <tr>
+                    <th>Total Seats</th>
+                    <td>40 Seats</td>
+                  </tr>
+                  <tr>
+                    <th>Class Time</th>
+                    <td>08:00 - 10:00</td>
+                  </tr>
+                  <tr>
+                    <th>Tuition Fee</th>
+                    <td>₹290 / Month</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="card-button">
+                <button>Learn More</button>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-image">
+              <img
+                src="https://themewagon.github.io/kidkinder/img/class-1.jpg"
+                alt="image1"
+              />
+            </div>
+            <div class="card-content">
+              <h2 class="card-h2">Drawing Classes</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                voluptatem maiores sunt quasi magni quae provident, id dolorum
+                quibusdam doloribus.
+              </p>
+              <div class="card-table">
+                <table>
+                  <tr>
+                    <th>Age of Kids</th>
+                    <td>3 - 6 Years</td>
+                  </tr>
+                  <tr>
+                    <th>Total Seats</th>
+                    <td>40 Seats</td>
+                  </tr>
+                  <tr>
+                    <th>Class Time</th>
+                    <td>08:00 - 10:00</td>
+                  </tr>
+                  <tr>
+                    <th>Tuition Fee</th>
+                    <td>₹290 / Month</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="card-button">
+                <button>Learn More</button>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-image">
+              <img
+                src="https://themewagon.github.io/kidkinder/img/class-1.jpg"
+                alt="image1"
+              />
+            </div>
+            <div class="card-content">
+              <h2 class="card-h2">Drawing Classes</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                voluptatem maiores sunt quasi magni quae provident, id dolorum
+                quibusdam doloribus.
+              </p>
+              <div class="card-table">
+                <table>
+                  <tr>
+                    <th>Age of Kids</th>
+                    <td>3 - 6 Years</td>
+                  </tr>
+                  <tr>
+                    <th>Total Seats</th>
+                    <td>40 Seats</td>
+                  </tr>
+                  <tr>
+                    <th>Class Time</th>
+                    <td>08:00 - 10:00</td>
+                  </tr>
+                  <tr>
+                    <th>Tuition Fee</th>
+                    <td>₹290/Month</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="card-button">
+                <button>Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="book">
+        <div class="book-left">
+          <div class="book-content">
+            <p class="book-para">BOOK A SEAT</p>
+            <h2>Book A Seat For Your Kid</h2>
+            <p class="book-para-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              animi quisquam, fuga ducimus recusandae dolores, saepe magni
+              ipsum, nemo aliquid dolore deserunt maiores iste accusantium?
+            </p>
+          </div>
+          <div class="book-lists">
+            <ul>
+              <li>Labore eos amet dolor amet diam</li>
+              <li>Etsea et sit dolor amet ipsum</li>
+              <li>Diam dolor diam elitripsum vero.</li>
+            </ul>
+          </div>
+          <div class="book-button1">
+            <button class="book-button">Book now</button>
+          </div>
+        </div>
+        <div class="book-right">
+          <div class="book-right-up">
+            <h2>Book A Seat</h2>
+          </div>
+
+          <div class="book-form">
+            <form action="">
+              <input type="text" name="" id="form-name" required />
+              <input type="email" name="" id="form-email" required />
+              <select id="form-select" required>
+                <option value="">Choose a class</option>
+                <option value="drawing">Drawing Class</option>
+                <option value="music">Music & Dance</option>
+                <option value="arts">Arts & Crafts</option>
+                <option value="playground">Play Ground</option>
+              </select>
+              <input class="form-button" type="submit" value="Book Now" />
+              <!-- <button class="form-button">Book now</button> -->
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="our-teachers">
+        <div class="teachers-up">
+          <p>OUR TEACHERS</p>
+          <h2>Meet Our Teachers</h2>
+        </div>
+        <div class="teachers-down">
+          <div class="teachers">
+            <div class="teachers-image">
+              <img src="./assets/team-1.jpg" alt="">
+              <div class="social">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <h2>Teacher Name</h2>
+              <i>Music Teacher</i>
+            </div>
+            <div class="teachers-info"></div>
+          </div>
+          <div class="teachers">
+            <div class="teachers-image">
+              <img src="./assets/team-1.jpg" alt="">
+              <div class="social"></div>
+              <h2>Teacher Name</h2>
+              <i>Music Teacher</i>
+            </div>
+            <div class="teachers-info"></div>
+          </div>
+          <div class="teachers">
+            <div class="teachers-image">
+              <img src="./assets/team-1.jpg" alt="">
+              <div class="social"></div>
+              <h2>Teacher Name</h2>
+              <i>Music Teacher</i>
+            </div>
+            <div class="teachers-info"></div>
+          </div>
+          <div class="teachers">
+            <div class="teachers-image">
+              <img src="./assets/team-1.jpg" alt="">
+              <div class="social"></div>
+              <h2>Teacher Name</h2>
+              <i>Music Teacher</i>
+            </div>
+            <div class="teachers-info"></div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial"></div>
+      <div class="latest-blog"></div>
+      <div class="footer"></div>
+    </div>
+    <script>
+      ScrollReveal().reveal(".content-right", {
+        distance: "100px",
+        duration: 800,
+        opacity: 0,
+        origin: "right",
+        easing: "ease-in-out",
+        scale: 1,
+      });
+      ScrollReveal().reveal(".one", {
+        distance: "20px",
+        duration: 800,
+        opacity: 0,
+        // origin: "left",
+        easing: "ease-in-out",
+        scale: 0.9,
+      });
+      ScrollReveal().reveal(".about-left", {
+        distance: "100px",
+        duration: 800,
+        opacity: 0,
+        origin: "left",
+        easing: "ease-in-out",
+        scale: 1,
+      });
+      ScrollReveal().reveal(".about-right", {
+        distance: "100px",
+        duration: 800,
+        opacity: 0,
+        origin: "right",
+        easing: "ease-in-out",
+        scale: 1,
+      });
+      ScrollReveal().reveal(".popularclasses-down", {
+        distance: "20px",
+        duration: 800,
+        opacity: 0,
+        // origin: "left",
+        easing: "ease-in-out",
+        scale: 0.9,
+      });
+      ScrollReveal().reveal(".book-right", {
+        distance: "100px",
+        duration: 800,
+        opacity: 0,
+        origin: "right",
+        easing: "ease-in-out",
+        scale: 0.9,
+      });
+      ScrollReveal().reveal(".book-left", {
+        distance: "100px",
+        duration: 800,
+        opacity: 0,
+        origin: "left",
+        easing: "ease-in-out",
+        scale: 0.9,
+      });
+      ScrollReveal().reveal(".content-left", {
+        distance: "100px",
+        duration: 800,
+        opacity: 0,
+        origin: "left",
+        easing: "ease-in-out",
+        scale: 1,
+      });
+      let name = localStorage.getItem("name");
+      console.log(name);
+      let a = (document.getElementsByClassName(
+        "content-subheading"
+      )[0].innerText = "Welcome " + name);
+
+      // JQuery
+
+      $(".nav-button").click(function () {
+        $('<h1 color="200px">HII</h1>').appendTo(".extra_nav");
+      });
+    </script>
+  </body>
+</html>

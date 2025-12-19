@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | KidKinder</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #17a2b8;
+      --dark: #00394f;
+    }
+
+    body {
+      font-family: "Nunito", sans-serif;
+      background-color: var(--primary);
+    }
+
+    /* NAVBAR */
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: white;
+      padding: 15px;
+    }
+
+    .logo i {
+      font-size: 40px;
+      color: var(--dark);
+    }
+
+    .logo-text {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-left: 10px;
+    }
+
+    /* HERO */
+    .login-hero {
+      height: calc(100vh - 90px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* LOGIN CARD */
+    .login-card {
+      background: white;
+      width: 360px;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: rgba(0,0,0,0.2) 0px 8px 20px;
+      text-align: center;
+    }
+
+    .login-card h1 {
+      font-family: "Handlee", cursive;
+      color: var(--dark);
+      margin-bottom: 25px;
+      font-size: 36px;
+    }
+
+    .login-card input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .login-card input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .options label {
+      color: gray;
+    }
+
+    .options a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background-color: var(--primary);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background-color: #138496;
+    }
+
+    @media (max-width: 480px) {
+      .login-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">
+    <i class="fa-solid fa-hippo"></i>
+    <span class="logo-text">KidKinder</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="login-hero">
+  <div class="login-card">
+    <h1>Login</h1>
+
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+
+    <div class="options">
+      <label>
+        <input type="checkbox" id="rem-check" />
+        Remember me
+      </label>
+      <a href="register.html">Register</a>
+    </div>
+
+    <button class="submit-button" onclick="login_submit()">
+      Login
+    </button>
+  </div>
+</div>
+
+<script>
+  function login_submit() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    let user_records = JSON.parse(localStorage.getItem("users")) || [];
+
+    if (
+      user_records.some(
+        (val) => val.email === email && val.password === password
+      )
+    ) {
+      alert("Login Successfully");
+
+      let current_user = user_records.filter(
+        (val) => val.email === email && val.password === password
+      )[0];
+
+      localStorage.setItem("name", current_user.name);
+      localStorage.setItem("email", current_user.email);
+
+      window.location.href = "index.html";
+    } else {
+      alert("Invalid Email or Password");
+    }
+  }
+</script>
+
+</body>
+</html>

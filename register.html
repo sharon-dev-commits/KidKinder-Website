@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | KidKinder</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #17a2b8;
+        --dark: #00394f;
+      }
+
+      body {
+        font-family: "Nunito", sans-serif;
+        background-color: var(--primary);
+      }
+
+      /* NAVBAR (same style as main page) */
+      .nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: white;
+        padding: 15px;
+      }
+
+      .logo i {
+        font-size: 40px;
+        color: var(--dark);
+      }
+
+      .logo-text {
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--primary);
+        margin-left: 10px;
+      }
+
+      /* HERO */
+      .register-hero {
+        height: calc(100vh - 90px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* REGISTER CARD */
+      .register-card {
+        background: white;
+        width: 380px;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px;
+        text-align: center;
+      }
+
+      .register-card h1 {
+        font-family: "Handlee", cursive;
+        color: var(--dark);
+        margin-bottom: 25px;
+        font-size: 36px;
+      }
+
+      .register-card input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+
+      .register-card input:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+      #rem-check {
+        margin-bottom: 10px;
+      }
+      .options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+
+      .options label {
+        color: gray;
+      }
+
+      .options a {
+        text-decoration: none;
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      .submit-button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 25px;
+        background-color: var(--primary);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .submit-button:hover {
+        background-color: #138496;
+      }
+
+      @media (max-width: 480px) {
+        .register-card {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <div class="nav">
+      <div class="logo">
+        <i class="fa-solid fa-hippo"></i>
+        <span class="logo-text">KidKinder</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="register-hero">
+      <div class="register-card">
+        <h1>Register</h1>
+
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+
+        <div class="options">
+          <label>
+            <input type="checkbox" id="rem-check" />
+            Remember me
+          </label>
+          <a href="login.html">Login</a>
+        </div>
+
+        <button class="submit-button" onclick="register_submit()">
+          Create Account
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function register_submit() {
+        let uname = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        let user_records = JSON.parse(localStorage.getItem("users")) || [];
+
+        if (user_records.some((val) => val.email === email)) {
+          alert("Duplicate Data entered!!");
+        } else {
+          user_records.push({
+            name: uname,
+            email: email,
+            password: password,
+          });
+          localStorage.setItem("users", JSON.stringify(user_records));
+          alert("User Registered!!");
+          window.location.href = "login.html";
+        }
+      }
+    </script>
+  </body>
+</html>
